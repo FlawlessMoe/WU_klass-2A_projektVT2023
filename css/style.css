@@ -1,166 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-html, body {
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-    margin-top: 0;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #333;
+.page-header {
+  position: relative;
+  padding: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-  
-p {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #666;
+
+#tessa-logo {
+  position: relative;
+  width: 10%;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.900));
 }
-  
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #333;
-    cursor: pointer;
+
+.nav-bar {
+  position: relative;
+  padding: 20px;
 }
-  
-button:hover {
-    background-color: #555;
+
+.nav-bar a {
+  position: relative;
+  color: #fbfbfb;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 15px;
+  font-weight: 600;
+  z-index: 1;
 }
-  
-.container {
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+
+.nav-bar a:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 5px;
+  z-index: 0;
 }
-  
-.question {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+
+.nav-bar a:hover:before {
+  opacity: 0.25;
+  transform: translateX(0%) translateY(0%);
+  z-index: 1;
 }
-  
-.question.fade-out {
+
+.active {
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.900));
+}
+
+.nav-bar a.active:before,
+.nav-bar a:hover:before {
+  animation: move-box 0.3s ease-in-out;
+  z-index: -1;
+}
+
+@keyframes move-box {
+  0% {
     opacity: 0;
-}
-  
-.options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-.option {
-    margin: 10px;
-    padding: 10px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    background-color: #fff;
-    cursor: pointer;
-}
-  
-.option:hover {
-    background-color: #f5f5f5;
-}
-  
-#option1 {
-    background-color: #4CAF50;
-}
-  
-#option2 {
-    background-color: #008CBA;
-}
-  
-#option3 {
-    background-color: #f44336;
-}
-  
-.summary {
-    display: none;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #000;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translate(calc(-100% + 5px), -5px);
+  }
+  100% {
+    opacity: 0.25;
+    transform: translate(calc(0% - 5px), -5px);
+  }
 }
 
-#two {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #010718;
-    overflow: hidden;
+.menu-icon {
+  color: #1e1e1e;
+  cursor: pointer;
+  display: none;
 }
 
-.container2 {
-    width: 246px;
-    overflow: hidden;
+button {
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.container2 .text {
-    position: relative;
-    color: #4070F4;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.container2 .text.first-text {
-    color: #FFF;
-}
-
-.text.sec-text:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+@media screen and (max-width: 1920px) {
+  #tessa-main {
     height: 100%;
     width: 100%;
-    background-color: #010718;
-    border-left: 2px solid #4070F4;
-    animation: animate 4s steps(12) infinite;
+  }
+
+  #main-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-@keyframes animate {
-    40%, 60%{
-        left: calc(100% + 4px);
-    }
-    100%{
-        left: 0%;
-    }
+@media screen and (max-width: 700px) {
+  .nav-bar {
+    display: none;
+    position: relative;
+    top: 3.7rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #tessa-logo {
+    width: 25%;
+  }
+
+  .nav-bar.responsive {
+    display: block;
+  }
+
+  .nav-bar a {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    z-index: 1;
+  }
+
+  button {
+    padding: 0.4rem;
+  }
+
+  #main-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #tessa-main {
+    height: 100%;
+    width: 200%;
+  }
+
+  #tessa-link {
+    
+  }
+}
+
+#tessa-main {
+  position: absolute;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: 600;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.900));
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
