@@ -1,185 +1,271 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    background-color: white;
 }
 
-.page-header {
-  position: relative;
-  padding: 20px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+html {
+    scroll-behavior: smooth;
 }
 
-#tessa-logo {
-  position: relative;
-  width: 10%;
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.900));
-}
-
-.nav-bar {
-  position: relative;
-  padding: 20px;
-}
-
-.nav-bar a {
-  position: relative;
-  color: #fbfbfb;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 15px;
-  font-weight: 600;
-  z-index: 1;
-}
-
-.nav-bar a:before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  background-color: #000;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  border-radius: 5px;
-  z-index: 0;
-}
-
-.nav-bar a:hover:before {
-  opacity: 0.25;
-  transform: translateX(0%) translateY(0%);
-  z-index: 1;
-}
-
-.active {
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.900));
-}
-
-.nav-bar a.active:before,
-.nav-bar a:hover:before {
-  animation: move-box 0.3s ease-in-out;
-  z-index: -1;
-}
-
-@keyframes move-box {
-  0% {
-    opacity: 0;
-    transform: translate(calc(-100% + 5px), -5px);
-  }
-  100% {
-    opacity: 0.25;
-    transform: translate(calc(0% - 5px), -5px);
-  }
-}
-
-.menu-icon {
-  color: #1e1e1e;
-  cursor: pointer;
-  display: none;
-}
-
-button {
-  font-size: 1rem;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-@media screen and (max-width: 1920px) {
-  #tessa-main {
-    height: 100%;
-    width: 100%;
-  }
-
-  #main-container {
+#header-section {
     display: flex;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .nav-bar {
-    display: none;
-    position: relative;
-    top: 3.7rem;
-    left: 0;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-  }
-
-  #tessa-logo {
-    width: 25%;
-  }
-
-  .nav-bar.responsive {
-    display: block;
-  }
-
-  .nav-bar a {
-    display: block;
-  }
-
-  .menu-icon {
-    display: block;
-    z-index: 1;
-  }
-
-  button {
-    padding: 0.4rem;
-  }
-
-  #main-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  #tessa-main {
-    height: 100%;
-    width: 200%;
-  }
-
-  #tessa-link {
-    
-  }
+    width: auto;
+    height: 100px;
+    background-color: rgb(249, 249, 249);
 }
 
-#tessa-main {
-  position: absolute;
+h2 {
+    color: rgb(39, 39, 39);
+}
+
+#logo-div {
+    margin: 35px;
+}
+
+#nav-ul {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 15px;
+    color: rgb(39, 39, 39);
+    font-weight: bold;
+    transition: 0.25s;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: rgb(119, 119, 119);
+}
+
+nav a:not(:hover) {
+    opacity: 100%;
+}
+
+#cart-div {
+    margin: 35px;
+}
+
+#shopping-bag {
+    width: 35px;
+    height: 37.5px;
+}
+
+@media screen and (max-width: 800px) {
+    nav a {
+        display: none;
+    }
+}
+
+#diff-brac {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#diff-brac-coll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.brac-p {
+    font-size: 10px;
+}
+
+#brac-title {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.img-brac {
+    display: grid;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    transition: 0.35s;
+}
+
+.img-brac:hover {
+    opacity: 60%;
+}
+
+.img-brac:not(:hover) {
+    opacity: 100%;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+#main-page-info {
+    margin: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#content-big-img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-small-img-div {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center ;
+}
+
+.content-small-img {
+    height: 210px;
+    width: 210px;
+    margin: 5px;
+    transition: .35s;
+    border: 0 solid;
+    border-radius: 25px;
+}
+
+.content-small-img:hover {
+    height: 220px;
+    width: 220px;
+}
+
+#content-big-img:not(:hover) {
+    height: 210px;
+    width: 210px;
+}
+
+#content-big-img {
+    height: 420px;
+    width: 420px;
+    margin: 5px;
+    transition: .35s;
+    border: 0 solid;
+    border-radius: 50px;
+}
+
+#content-big-img:hover {
+    height: 430px;
+    width: 430px;
+}
+
+#content-big-img:not(:hover) {
+    height: 420px;
+    width: 420px;
+}
+
+#content-div-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-div-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-title {
+    margin-top: 50px;
+}
+
+#main-page-text-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#main-page-text-content {
+    width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+#main-page-text-photo {
+    margin-left: 25px;
+}
+
+#main-photo {
+    height: 500px;
+    width: 500px;
+    margin: 5px;
+    border: 0 solid;
+    border-radius: 50px 100px 50px 100px;
+}
+
+#main-page-text {
+    width: 500px;
+    margin-right: 30px;
+}
+
+#main-text-p {
+    margin-top: 5px;
+    text-align: start;
+    font-size: 14px;
+}
+
+#smsb {
+    margin-top: 25px;
+    height: 25px;
+}
+
+#nav-div2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  color: #fff;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  font-weight: 600;
-  filter: drop-shadow(0px 4px 3px rgba(0, 0, 0, 0.900));
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: auto;
+    background-color: whitesmoke;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  max-width: auto;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+#footer-div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 750px;
+    height: 100px;
+}
+
+.footer-p {
+    font-size: 12px;
 }
