@@ -57,7 +57,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0 015px;
 }
 
 nav a {
@@ -87,6 +87,10 @@ nav a:not(:hover) {
 
 @media screen and (max-width: 800px) {
     nav a {
+        display: none;
+    }
+
+    #diff-brac {
         display: none;
     }
 }
@@ -123,6 +127,10 @@ nav a:not(:hover) {
     border: none;
     border-radius: 25px;
     transition: 0.35s;
+}
+
+.img {
+    max-width: 60%;
 }
 
 .img-brac:hover {
@@ -162,7 +170,7 @@ p {
     display: grid;
     justify-content: center;
     text-align: center;
-    align-items: center ;
+    align-items: center;
 }
 
 .content-small-img {
@@ -172,6 +180,7 @@ p {
     transition: .35s;
     border: 0 solid;
     border-radius: 25px;
+    background-color: whitesmoke;
 }
 
 .content-small-img:hover {
@@ -604,6 +613,7 @@ footer {
 
 .box-up {
     background-color: whitesmoke;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
 }
   
 .el-wrapper .box-up {
