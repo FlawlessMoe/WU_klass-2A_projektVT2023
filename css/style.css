@@ -809,6 +809,7 @@ tfoot td {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
     
 .checkout button {
@@ -822,6 +823,10 @@ tfoot td {
     
 .checkout button:hover {
     background-color: #000;
+}
+
+#cart-btn {
+    margin: 10px;
 }
 
 @media screen and (min-width: 801px) and (max-width: 5000px) {
