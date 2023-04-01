@@ -7,3 +7,15 @@ addToCartButtons.forEach(function (button) {
     cartAmount.textContent = currentCount + 1;
   });
 });
+
+const images = document.querySelectorAll('img');
+
+		images.forEach((img) => {
+			img.addEventListener('mouseover', () => {
+				img.style.opacity = '0.5';
+			});
+
+			img.addEventListener('mouseout', () => {
+				img.style.opacity = '1';
+			});
+		});

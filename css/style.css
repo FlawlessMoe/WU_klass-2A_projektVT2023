@@ -90,6 +90,7 @@ nav a:not(:hover) {
 #shopping-bag {
     width: 35px;
     height: 37.5px;
+    pointer-events: none;
 }
 
 #diff-brac {
@@ -250,6 +251,11 @@ p {
     margin: 5px;
     border: 0 solid;
     border-radius: 50px 100px 50px 100px;
+    transition: 0.5s;
+}
+
+.product-img {
+    transition: 0.25s;
 }
 
 #main-page-text {
@@ -829,6 +835,41 @@ tfoot td {
     margin: 10px;
 }
 
+#main-section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#first-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin-left: 300px;
+}
+
+#second-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin-left: 300px;
+}
+
+.about-us-photo {
+    height: 250px;
+    width: 250px;
+    margin: 25px;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
 @media screen and (min-width: 801px) and (max-width: 5000px) {
     .photo-btn {
         pointer-events: none;
@@ -932,5 +973,9 @@ tfoot td {
     #add-btn {
         margin-top: 5px;
         margin-left: 10px;
+    }
+
+    #shopping-bag {
+        pointer-events: none;
     }
 }
