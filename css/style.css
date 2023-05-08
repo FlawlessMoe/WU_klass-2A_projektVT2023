@@ -518,24 +518,15 @@ footer {
 }
 
 .d-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
   
 .align-center {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
   
 .flex-centerY-centerX {
     justify-content: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
   
@@ -562,7 +553,7 @@ footer {
     align-items: center;
 }
 
-#menu-item-btn {
+.menu-item-btn {
     text-decoration: none;
 }
 
